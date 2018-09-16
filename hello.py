@@ -107,6 +107,9 @@ for path in sys.path:
 # print(myTemp.temperature)
 # print(myTemp._temperature)
 
+A = [1,2,3,4,5,6]
+print(A.index(2))
+
 print ("Hello world")
 
 
