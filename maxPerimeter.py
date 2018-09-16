@@ -17,9 +17,9 @@ def solution(A):
     else:
         return max_peri
 
-#print(solution(A))
-#print(solution(sample1))
-#print(solution(sample2))
+print(solution(A))
+print(solution(sample1))
+print(solution(sample2))
 print(solution(sample3))
 
 
