@@ -41,7 +41,6 @@ for path in sys.path:
 	print(path)"""
 
 
-
 # def greet(name):
 # 	"""This function greets to
 # 	the person passed in as
@@ -98,26 +97,10 @@ for path in sys.path:
 #         self._temperature = value
 
 
-
-
-
 # myTemp = Celsius(20)
 # print(myTemp.temperature)
 # myTemp.temperature = 37
 # print(myTemp.temperature)
 # print(myTemp._temperature)
-
-A = [1,2,3,4,5,6]
-print(A.index(2))
-
-print ("Hello world")
-
-
-
-
-
-
-
-
 
 
