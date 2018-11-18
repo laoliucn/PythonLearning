@@ -103,4 +103,26 @@ for path in sys.path:
 # print(myTemp.temperature)
 # print(myTemp._temperature)
 
+class Student:
+    def __init__(self, name, score):
+        self.__name = name
+        self.__score = score
 
+    @property
+    def name(self):
+        return self.__name
+
+    @property
+    def score(self):
+        return self.__score
+
+    def print_stu(self):
+        print('name:%s, score:%s' % (self.__name, self.__score))
+
+    def hello(self):
+        print('name:%s, score:%s' % (self.name, self.score))
+
+
+a = Student('Travis', 98)
+a.print_stu()
+a.hello()
