@@ -54,18 +54,24 @@ Write an efficient algorithm for the following assumptions:
 N is an integer within the range [0..100,000];
 each element of array A is an integer that can have one of the following values: 0, 1.
 """
+import functools
 
 
+@functools.lru_cache()
 def fibonacci(n):
     return n if n < 2 else fibonacci(n - 1) + fibonacci(n - 2)
 
 
 # input
 A = [0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0]
-
+B = [1, 1, 1, 1]
+C = []
+D = [0, 0, 1, 0, 1, 0, 0, 1]
 
 def solution(A):
     length = len(A)
+    if length == 0:
+        return 1
 
     # This is the objective
     arrival = length + 1
@@ -79,6 +85,9 @@ def solution(A):
     # Frog can only jump on the position where has leaf.
     leaves_position = set(i + 1 for i in range(length) if A[i])
     leaves_position.add(arrival)  # Target shore need to be treated as a good leaf position as well.
+
+    print(jumps)
+    print(leaves_position)
 
     # With the first jump, only the following position could be reached.
     required_jumps = 1
@@ -97,4 +106,6 @@ def solution(A):
     return required_jumps if arrival in next_places else -1
 
 
-print(solution(A))
+print(solution(D))
+#print(solution(B))
+#print(solution(C))
