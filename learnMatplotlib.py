@@ -16,6 +16,15 @@ plt.title("sin&cos")
 plt.legend()
 plt.show()
 
-img = imread('/Users/travisliu/Documents/AMIS/Myself.png')
-plt.imshow(img)
+# img = imread('/Users/travisliu/Documents/AMIS/Myself.png')
+# plt.imshow(img)
+#plt.show()
+
+a = np.zeros([3, 2])
+a[0, 0] = 1
+a[0, 1] = 2
+a[1, 0] = 9
+a[2, 1] = 12
+plt.imshow(a, interpolation="nearest")
 plt.show()
+
